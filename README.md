@@ -12,7 +12,7 @@ yarn add @xmtp/xmtp-js ethers@5.7.0 @xmtp/grpc-api-client
 
 Here's a basic example of how to create the client:
 
-````tsx
+```tsx
 export default async function createClient(): Promise<Client> {
   // Retrieve the private key from environment variables
   const key = process.env.KEY;
@@ -40,8 +40,9 @@ export default async function createClient(): Promise<Client> {
   // Return the initialized XMTP client
   return client;
 }
+```
 
-And how to answer automatically to a request
+And how to answer automatically to a message
 
 ```typescript
 // Call `run` with a handler function. The handler function is called
@@ -54,7 +55,7 @@ run(async (context) => {
   // To reply, just call `reply` on the HandlerContext.
   await context.reply(`ECHO: ${messageBody}`);
 });
-````
+```
 
 ## Getting started
 
@@ -85,3 +86,7 @@ cp .env.example .env
 ```
 
 Powered by <a href="https://kapa.ai">Kapa</a>
+
+```
+
+```
