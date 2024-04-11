@@ -59,6 +59,13 @@ run(async (context) => {
 
 ## Getting started
 
+Env variables:
+
+```bash
+KEY="YOUR PRIVATE KEY"
+XMTP_ENV=dev
+```
+
 To install dependencies:
 
 ```bash
@@ -81,12 +88,4 @@ yarn start:watch
 
 ### Environment
 
-```bash
-cp .env.example .env
-```
-
 Powered by <a href="https://kapa.ai">Kapa</a>
-
-```
-
-```
