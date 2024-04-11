@@ -85,7 +85,3 @@ To run with hot-reload:
 yarn build:watch
 yarn start:watch
 ```
-
-### Environment
-
-Powered by <a href="https://kapa.ai">Kapa</a>
