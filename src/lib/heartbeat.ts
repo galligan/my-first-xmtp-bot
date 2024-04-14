@@ -53,9 +53,9 @@ export const checkHeartbeat = async () => {
   }
 };
 
-export const sendHeartbeat = async (key: string) => {
+export const sendHeartbeat = async () => {
   try {
-    let wallet = new Wallet(key);
+    let wallet = new Wallet(process.env.HEARTBEAT_BOT_KEY as string);
     const client = await Client.create(wallet, {
       env: process.env.XMTP_ENV as any,
     });
@@ -74,7 +74,7 @@ export const sendHeartbeat = async (key: string) => {
 if (process.env.HEARTBEAT_BOT_KEY) {
   console.log("Heartbeat interval set to", round(INTERVAL / 60000), "minutes");
   setInterval(async () => {
-    sendHeartbeat(process.env.HEARTBEAT_BOT_KEY as string);
+    sendHeartbeat();
     const shouldRestart = await checkHeartbeat();
     if (shouldRestart) process.exit(1);
   }, INTERVAL);
