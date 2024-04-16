@@ -72,6 +72,7 @@ export const sendHeartbeat = async () => {
   }
 };
 export const scheduleHeartbeat = () => {
+  console.log("Scheduling heartbeat.");
   cron.schedule(
     "*/5 * * * *",
     () => {
