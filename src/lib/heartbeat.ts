@@ -6,7 +6,11 @@ import { Client } from "@xmtp/xmtp-js";
 import { Wallet } from "ethers";
 import cron from "node-cron";
 
-const INTERVAL = process.env.DEBUG === "true" ? 10000 : 300000; // 5 minutes'
+const INTERVAL =
+  process.env.DEBUG === "true" && process.env.RAILWAY_SERVICE_NAME === undefined
+    ? 10000
+    : 300000; // 5 minutes
+
 const DELAY = INTERVAL * 1.5;
 
 let latestHeartbeat: number | null = null;
