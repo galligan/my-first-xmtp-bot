@@ -71,16 +71,6 @@ export const sendHeartbeat = async () => {
     console.log("Error sending heartbeat:", error);
   }
 };
-
-if (process.env.HEARTBEAT_BOT_KEY) {
-  console.log("Heartbeat interval set to", round(INTERVAL / 60000), "minutes");
-  setInterval(async () => {
-    sendHeartbeat();
-    const shouldRestart = await checkHeartbeat();
-    if (shouldRestart) process.exit(1);
-  }, INTERVAL);
-}
-
 export const scheduleHeartbeat = () => {
   cron.schedule(
     "*/5 * * * *",
@@ -92,3 +82,12 @@ export const scheduleHeartbeat = () => {
     }
   );
 };
+if (process.env.HEARTBEAT_BOT_KEY) {
+  scheduleHeartbeat();
+  console.log("Heartbeat interval set to", round(INTERVAL / 60000), "minutes");
+  setInterval(async () => {
+    sendHeartbeat();
+    const shouldRestart = await checkHeartbeat();
+    if (shouldRestart) process.exit(1);
+  }, INTERVAL);
+}
