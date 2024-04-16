@@ -4,6 +4,7 @@ If the bot does not receive a heartbeat message for more than 2 minutes, it will
 
 import { Client } from "@xmtp/xmtp-js";
 import { Wallet } from "ethers";
+import cron from "node-cron";
 
 const INTERVAL = process.env.DEBUG === "true" ? 10000 : 300000; // 5 minutes'
 const DELAY = INTERVAL * 1.5;
@@ -79,3 +80,15 @@ if (process.env.HEARTBEAT_BOT_KEY) {
     if (shouldRestart) process.exit(1);
   }, INTERVAL);
 }
+
+export const scheduleHeartbeat = () => {
+  cron.schedule(
+    "*/5 * * * *",
+    () => {
+      sendHeartbeat();
+    },
+    {
+      runOnInit: false,
+    }
+  );
+};
