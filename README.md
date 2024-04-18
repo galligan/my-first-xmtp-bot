@@ -4,7 +4,7 @@ Hey you wanna make a bot on the XMTP network? Heck yeah. This repo makes that ea
 
 ## Usage
 
-Wanna try it live? Message `0x61175cdB3cdC0459896e10Cce0A4Dab49FD69702` on an XMTP Client
+Wanna try it out? Message `0x61175cdB3cdC0459896e10Cce0A4Dab49FD69702` on an XMTP Client
 
 #### Setup and Dependencies
 
