@@ -90,6 +90,7 @@ Railway is a platform that simplifies application deployment. Here’s how to de
 - Connect your GitHub repository or use Railway's template.
 - Set your environment variables and redis string url
 - Deploy your application.
+- Deploy a [ENS domain](https://ens.domains/) and share your bot!
 
 #### Development
 
