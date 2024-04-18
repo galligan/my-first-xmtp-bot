@@ -40,7 +40,8 @@ run(async (context: HandlerContext) => {
       inMemoryCacheStep.set(senderAddress, 0);
     } else if (content === "2") {
       await redisClient.set(senderAddress, "subscribed");
-      message = "You are now subscribed. You will receive updates.";
+      message =
+        "You are now subscribed. You will receive updates.\n\ntype 'stop' to unsubscribe";
       //reset the bot to the initial step
       inMemoryCacheStep.set(senderAddress, 0);
     } else {
