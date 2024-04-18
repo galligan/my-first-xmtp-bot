@@ -1,8 +1,10 @@
-# Your First Bot
+# Your First Bot 🤖
 
 Hey you wanna make a bot on the XMTP network? Heck yeah. This repo makes that easier. To see other Bot examples checkout [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)
 
 ## Usage
+
+> Wanna try it live? Message `0x61175cdB3cdC0459896e10Cce0A4Dab49FD69702` on an xmtp client
 
 #### Setup and Dependencies
 
@@ -106,6 +108,17 @@ Railway is a platform that simplifies application deployment. Here’s how to de
 - Connect your GitHub repository or use Railway's template.
 - Set your environment variables (`REDIS_URL`, etc.) in Railway's dashboard.
 - Deploy your application.
+
+VIA CMD
+
+```bash
+# login
+railway login
+#  create project
+railway init
+# deploy
+railway up
+```
 
 #### Development
 
