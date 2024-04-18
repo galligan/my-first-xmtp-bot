@@ -1,6 +1,0 @@
-services:
-  web:
-    build:
-      command: "yarn install && yarn build"
-    start:
-      command: "yarn start"

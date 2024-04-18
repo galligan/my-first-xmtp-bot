@@ -8,7 +8,7 @@ import run from "./lib/runner.js";
 //Tracks conversation steps
 const inMemoryCacheStep = new Map<string, number>();
 
-//List of words to stop or unsubscribe
+//List of words to stop or unsubscribe.
 const stopWords = ["stop", "unsubscribe", "cancel", "list"];
 
 run(async (context: HandlerContext) => {
