@@ -1,4 +1,4 @@
-# Your First Bot 🤖
+# Your First Cool Bot 😎🤖
 
 Hey you wanna make a bot on the XMTP network? Heck yeah. This repo makes that easier. To see other Bot examples checkout [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)
 
