@@ -2,13 +2,13 @@
 
 Hey you wanna make a bot on the XMTP network? Heck yeah. This repo makes that easier. To see other Bot examples checkout [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)
 
-> ⚠️ Ensure you're using `Yarn 4` for dependency management. Check with `yarn --version`.
-
 ## Usage
 
 #### Setup and Dependencies
 
 First, install the package in your project:
+
+> ⚠️ Ensure you're using `Yarn 4` for dependency management. Check with `yarn --version`.
 
 ```bash
 yarn add @xmtp/xmtp-js ethers@5.7.0 @xmtp/grpc-api-client dotenv redis node-cron
