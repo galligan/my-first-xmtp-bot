@@ -8,7 +8,7 @@ Hey you wanna make a bot on the XMTP network? Heck yeah. This repo makes that ea
 
 #### Setup and Dependencies
 
-First, install the package in your project:
+Install the package in your project:
 
 > ⚠️ Ensure you're using `Yarn 4` for dependency management. Check with `yarn --version`.
 
@@ -16,13 +16,7 @@ First, install the package in your project:
 yarn add @xmtp/xmtp-js ethers@5.7.0 @xmtp/grpc-api-client dotenv redis node-cron
 ```
 
-To create a streamlined and highly effective template for a conversational bot that developers can easily adapt and extend, we'll focus on simplicity and clarity. Below is a concise template that includes essential features such as memory caching, Redis integration for persistent data, handling stop words, displaying numbered options, and a brief guide on deploying to Railway.
-
-First, ensure you have Node.js installed. Then, set up your project with the necessary dependencies:
-
-Create a `.env` file for environment variables like Redis credentials and any other configuration.
-
-#### Bot Logic with Memory Cache and Redis Integration
+#### Bot logic
 
 ```tsx
 const inMemoryCacheStep = new Map<string, number>();
@@ -99,26 +93,16 @@ cron.schedule(
 );
 ```
 
-#### Deployment to Railway
+#### Deployment to railway
 
 Railway is a platform that simplifies application deployment. Here’s how to deploy this bot:
 
 - Sign up at [Railway](https://railway.app/).
 - Click 'New Project' and select 'Node.js'.
+- Create a redis DB
 - Connect your GitHub repository or use Railway's template.
-- Set your environment variables (`REDIS_URL`, etc.) in Railway's dashboard.
+- Set your environment variables and redis string url
 - Deploy your application.
-
-VIA CMD
-
-```bash
-# login
-railway login
-#  create project
-railway init
-# deploy
-railway up
-```
 
 #### Development
 
