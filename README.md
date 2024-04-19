@@ -13,7 +13,7 @@ Install the package in your project:
 > ⚠️ Ensure you're using `Yarn 4` for dependency management. Check with `yarn --version`.
 
 ```bash
-yarn add @xmtp/xmtp-js ethers@5.7.0 @xmtp/grpc-api-client dotenv redis node-cron
+yarn add @xmtp/xmtp-js ethers@5.7.0 @xmtp/grpc-api-client dotenv redis node-cron @xmtp/redis-persistence
 ```
 
 #### Bot logic
